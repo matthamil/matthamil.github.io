@@ -1,5 +1,4 @@
 body {
-  padding: 25px;
   background-color: rgb(104, 170, 170);
   font-family: monospace;
   display: flex;
@@ -9,6 +8,9 @@ body {
 }
 
 .window {
+  position: absolute;
+  z-index: 9;
+  top: 40px;
   min-width: 400px;
   background-color: rgb(189, 189, 189);
   padding: 2px;
@@ -25,6 +27,8 @@ img {
 }
 
 .window-banner {
+  z-index: 10;
+  cursor: move;
   background-color: rgb(12, 12, 123);
   color: #fff;
   display: flex;
@@ -37,7 +41,7 @@ img {
 }
 
 .window-banner-close {
-  cursor: pointer;
+  cursor: not-allowed;
   width: 15px;
 }
 
@@ -70,4 +74,45 @@ img {
 
 .underline {
   text-decoration: underline;
+}
+
+input {
+  cursor: pointer;
+}
+
+button {
+  margin-top: 10px;
+  width: 30%;
+  padding: 5px 0;
+  border-left: 2px solid rgb(239, 239, 239);
+  border-top: 2px solid rgb(239, 239, 239);
+  border-right: 2px solid rgb(120, 120, 120);
+  border-bottom: 2px solid rgb(120, 120, 120);
+  font-family: monospace;
+  font-size: 1em;
+  background-color: rgb(189, 189, 189);
+  cursor: pointer;
+}
+
+button:focus {
+  outline: 0;
+  box-shadow: inset 0px 2px rgb(239, 239, 239), inset 2px 0px rgb(239, 239, 239);
+  border: 1px solid black;
+  border-right: 2px solid black;
+  border-bottom: 2px solid black;
+}
+
+button:first-of-type {
+  box-shadow: inset 0px 2px rgb(239, 239, 239), inset 2px 0px rgb(239, 239, 239);
+  border: 1px solid black;
+  border-right: 2px solid black;
+  border-bottom: 2px solid black;
+}
+
+button:active {
+  box-shadow: inset 0px 2px rgb(120, 120, 120),
+    inset 2px 0px rgb(120, 120, 120) /*5px 5px black*/;
+  border: 1px solid black;
+  border-right: 2px solid rgb(239, 239, 239);
+  border-bottom: 2px solid rgb(239, 239, 239);
 }
