@@ -22,6 +22,12 @@ body {
   letter-spacing: -0.5px;
 }
 
+@media (max-width: 500px) {
+  .window {
+    min-width: 95vw;
+  }
+}
+
 img {
   width: 35px;
 }

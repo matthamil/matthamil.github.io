@@ -44,7 +44,7 @@ window.onload = function() {
       pos4 = 0;
     if (document.querySelector(".window-header")) {
       /* if present, the header is where you move the DIV from:*/
-      document.queyrSelector(".window-header").onmousedown = dragMouseDown;
+      document.querySelector(".window-header").onmousedown = dragMouseDown;
     } else {
       /* otherwise, move the DIV from anywhere inside the DIV:*/
       elmnt.onmousedown = dragMouseDown;
